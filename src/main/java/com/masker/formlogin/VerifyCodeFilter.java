@@ -26,7 +26,7 @@ public class VerifyCodeFilter extends GenericFilter {
                 throw new AuthenticationServiceException("验证码不能为空！");
             }
 
-            if (!(requestCaptcha.toLowerCase()).equalsIgnoreCase(genericCaptcha.toLowerCase())){
+            if (!((requestCaptcha.toLowerCase()).equalsIgnoreCase(genericCaptcha.toLowerCase()))){
                 throw new AuthenticationServiceException("输入验证码错误！");
             }
         }
